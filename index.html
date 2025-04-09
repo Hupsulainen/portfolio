@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Google Fonts - keep only if used heavily on the page -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+
+    <!-- Keep only the necessary CSS files -->
+    <link rel="stylesheet" href="css/all.min.css"> <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="css/tooplate-style.css">
+</head>
+
+<body class="tm-bg-dark">
+    <main class="tm-container masonry">
+        <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
+            <p class="tm-hero-text">&ldquo;Olen 30-vuotias oululainen lähihoitaja, ja opiskelen ammattikorkeakoulussa tietotekniikkaa. Erikoistun ohjelmointiin, ja minulla on vahva kiinnostus teknologiaan sekä digitaalisiin ratkaisuihin. Tavoitteenani on työllistyä ajan myötä ohjelmistokehittäjäksi, mutta tällä hetkellä etsin työtä laajasti eri aloilta, erityisesti kesäksi. &rdquo;</p>
+            <header class="tm-block-brand">
+                <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
+                    <i class="fas fa-braille fa-3x"></i>
+                    <h1 class="tm-brand-name">Camilla Hyvärinen</h1>
+                </div>
+            </header>
+        </div>
+
+        <div class="item" data-desktop-seq-no="2" data-mobile-seq-no="4">
+            <img src="img/gloves.jpg" alt="Image" class="tm-img-left">
+        </div>
+
+        <div class="item tm-bg-secondary tm-text-white tm-block tm-block-wider tm-block-pad tm-block-left-2" data-desktop-seq-no="3" data-mobile-seq-no="5">
+            <i class="fas fa-award fa-4x tm-block-icon"></i>
+            <p><a href="https://github.com/Hupsulainen">GitHub</a></p>
+        </div>
+
+        <div class="item" data-desktop-seq-no="4" data-mobile-seq-no="8">
+            <img src="img/flowers.jpg" alt="Image" class="tm-img-left">
+        </div>
+
+        <div class="tm-footer" id="tmFooter" data-desktop-seq-no="5" data-mobile-seq-no="9">
+            <div>
+                <p class="tm-mb-small">Copyright &copy; 2025 Camilla Hyvärinen</p>
+            </div>
+        </div>
+
+        <div class="item" data-desktop-seq-no="6" data-mobile-seq-no="2">
+            <img src="img/selfie.jpg" alt="Image">
+        </div>
+
+        <div class="item tm-block-right" data-desktop-seq-no="7" data-mobile-seq-no="3">
+            <div class="tm-block-right-inner tm-bg-primary-light tm-text-white tm-block tm-block-wider tm-block-pad">
+                <header>
+                    <h2 class="tm-text-uppercase">
+                        KOULUTUS
+                    </h2>
+                </header>
+                <ul>
+                    <li>Insinööri, tietotekniikka. OAMK (jatkuu edelleen)</li>
+                    <li>Sosiaali- ja terveysalan perustutkinto, OSAO (Toukokuu 2022)</li>
+                    <li>Media-assistentti, Ammattiopisto Lappia (Joulukuu 2014)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="item" data-desktop-seq-no="8" data-mobile-seq-no="6">
+            <img src="img/code.jpg" alt="Image">
+        </div>
+
+        <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
+            <div class="tm-form-container tm-block-pad tm-pb-0">
+                <header>
+                    <h2 class="tm-text-uppercase tm-text-gray-light tm-mb">
+                        OTA YHTEYTTÄ
+                    </h2>
+                </header>
+                <p>camilla.hyvarinen@gmail.com</p>
+            </div>
+
+            <div class="tm-form-section-tag">
+                <div class="tm-bg-secondary tm-text-white tm-block-pad tm-form-section-tag-inner">
+                    <header>
+                        <h2>Tapaamisiin!</h2>
+                    </header>
+                    <p>Vastaan sähköpostiin aina niin pian kuin mahdollista.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Optional JavaScript: Remove if unnecessary -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+        // Simple layout adjustment script
+        let callAdjustLayout;
+        let currentLayout = "desktop", nextLayout = "desktop";
+
+        function adjustLayout() {
+            let block1, block2, block3, block4, block5, block6, block7, block8, block9;
+
+            if (window.innerWidth <= 1199) {
+                nextLayout = "mobile";
+                block1 = $("div[data-mobile-seq-no='1']");
+                block2 = $("div[data-mobile-seq-no='2']");
+                block3 = $("div[data-mobile-seq-no='3']");
+                block4 = $("div[data-mobile-seq-no='4']");
+                block5 = $("div[data-mobile-seq-no='5']");
+                block6 = $("div[data-mobile-seq-no='6']");
+                block7 = $("div[data-mobile-seq-no='7']");
+                block8 = $("div[data-mobile-seq-no='8']");
+                block9 = $("div[data-mobile-seq-no='9']");
+            } else {
+                nextLayout = "desktop";
+                block1 = $("div[data-desktop-seq-no='1']");
+                block2 = $("div[data-desktop-seq-no='2']");
+                block3 = $("div[data-desktop-seq-no='3']");
+                block4 = $("div[data-desktop-seq-no='4']");
+                block5 = $("div[data-desktop-seq-no='5']");
+                block6 = $("div[data-desktop-seq-no='6']");
+                block7 = $("div[data-desktop-seq-no='7']");
+                block8 = $("div[data-desktop-seq-no='8']");
+                block9 = $("div[data-desktop-seq-no='9']");
+            }
+
+            if (nextLayout !== currentLayout) {
+                block1.after(block2.detach());
+                block2.after(block3.detach());
+                block3.after(block4.detach());
+                block4.after(block5.detach());
+                block5.after(block6.detach());
+                block6.after(block7.detach());
+                block7.after(block8.detach());
+                block8.after(block9.detach());
+                currentLayout = nextLayout;
+            }
+        }
+
+        window.onresize = function () {
+            clearTimeout(callAdjustLayout);
+            callAdjustLayout = setTimeout(adjustLayout, 100);
+        }
+
+        $(function () {
+            adjustLayout();
+        });
+    </script>
+</body>
+
+</html>
